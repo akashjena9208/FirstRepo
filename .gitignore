@@ -19,7 +19,7 @@ target/
 *.iml
 *.ipr
 
-.gitattributes
+
 
 ### NetBeans ###
 /nbproject/private/
@@ -33,3 +33,4 @@ build/
 
 ### VS Code ###
 .vscode/
+.gitattributes
