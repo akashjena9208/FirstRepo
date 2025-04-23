@@ -1,0 +1,168 @@
+Core Annotations
+@SpringBootApplication: Marks the main class of a Spring Boot application, enabling auto-configuration and component scanning.
+
+Controller Annotations
+@Controller: Indicates that a class serves the role of a controller in Spring MVC, handling incoming HTTP requests.
+
+@RestController: Specialization of @Controller that simplifies the creation of RESTful web services. It combines @Controller and @ResponseBody.
+
+Request Mapping Annotations
+@RequestMapping: Maps HTTP requests to handler methods of @Controller classes.
+
+@GetMapping: Shortcut for @RequestMapping(method = RequestMethod.GET).
+
+@PostMapping: Shortcut for @RequestMapping(method = RequestMethod.POST).
+
+@PutMapping: Shortcut for @RequestMapping(method = RequestMethod.PUT).
+
+@DeleteMapping: Shortcut for @RequestMapping(method = RequestMethod.DELETE).
+
+Request Parameter Annotations
+@RequestParam: Binds HTTP request parameter to method parameters in controller methods.
+
+@PathVariable: Extracts values from the URI path to method parameters.
+
+Response Annotations
+@ResponseBody: Returns the response body directly in a controller method, useful for RESTful APIs.
+
+@ResponseStatus: Sets the HTTP status code on the response.
+
+Dependency Injection Annotations
+@Autowired: Marks a constructor, field, or setter method to be autowired by Spring's dependency injection capabilities.
+
+@Qualifier: Specifies which bean to autowire when multiple beans of the same type exist.
+
+Component Annotations
+@Component: Indicates that a class is a Spring component, allowing it to be automatically detected and configured.
+
+@Service: Specialization of @Component for marking service classes.
+
+@Repository: Specialization of @Component for marking repository or DAO classes.
+
+Transaction Annotations
+@Transactional: Defines the scope of a single database transaction on a method or class.
+
+Validation Annotations
+@Valid: Indicates that a method parameter or method return type should be validated.
+
+Others
+@Configuration: Indicates that a class provides Spring configuration.
+
+@Bean: Marks a method to instantiate and configure a bean to be managed by the Spring IoC container.
+
+These annotations help streamline development and configuration in a Spring Boot application by leveraging Spring's powerful dependency injection and aspect-oriented programming features.
+
+
+
+
+
+
+
+
+You said:
+Write all annotion
+
+
+ChatGPT said:
+Sure! Here's a comprehensive list of annotations used in Spring Framework and Spring Boot, grouped by their functionality:
+
+🔷 1. Spring Boot Core Annotations
+
+Annotation	Description
+@SpringBootApplication	Combines @Configuration, @EnableAutoConfiguration, and @ComponentScan
+@EnableAutoConfiguration	Enables Spring Boot’s auto-configuration mechanism
+@ComponentScan	Scans for components, configurations, and services in the specified package
+@SpringBootConfiguration	Indicates that a class provides Spring Boot application configuration
+🔷 2. Stereotype Annotations (Component Scanning)
+
+Annotation	Description
+@Component	Generic stereotype for any Spring-managed component
+@Service	Specialization of @Component for service layer classes
+@Repository	Specialization of @Component for persistence layer
+@Controller	Marks a class as a Spring MVC controller
+@RestController	Combines @Controller and @ResponseBody for RESTful web services
+🔷 3. Spring MVC / Web Annotations
+
+Annotation	Description
+@RequestMapping	Maps HTTP requests to handler methods
+@GetMapping	Shortcut for @RequestMapping(method = RequestMethod.GET)
+@PostMapping	Shortcut for @RequestMapping(method = RequestMethod.POST)
+@PutMapping	Shortcut for @RequestMapping(method = RequestMethod.PUT)
+@DeleteMapping	Shortcut for @RequestMapping(method = RequestMethod.DELETE)
+@PatchMapping	Shortcut for @RequestMapping(method = RequestMethod.PATCH)
+@RequestParam	Binds a request parameter to a method parameter
+@PathVariable	Extracts values from URI path
+@RequestBody	Binds the body of the request to a method parameter
+@ResponseBody	Returns the method return value as the response body
+@ResponseStatus	Changes the HTTP status code of the response
+@ModelAttribute	Binds request parameters to a model attribute
+🔷 4. Dependency Injection
+
+Annotation	Description
+@Autowired	Automatically injects dependencies
+@Qualifier	Specifies the exact bean to inject when multiple candidates exist
+@Inject	Standard Java annotation for injection (JSR-330)
+@Resource	Injects by bean name (JSR-250)
+@Value	Injects values from properties files
+🔷 5. Configuration & Bean Definition
+
+Annotation	Description
+@Configuration	Marks the class as a source of bean definitions
+@Bean	Declares a bean manually in a @Configuration class
+@Import	Imports additional configuration classes
+@PropertySource	Loads properties file into Spring Environment
+🔷 6. Spring Data JPA / Hibernate
+
+Annotation	Description
+@Entity	Marks a class as a JPA entity
+@Table	Specifies table details for the entity
+@Id	Specifies the primary key
+@GeneratedValue	Defines how the primary key is generated
+@Column	Specifies column details
+@OneToOne, @OneToMany, @ManyToOne, @ManyToMany	Defines relationships between entities
+@JoinColumn	Specifies the foreign key column
+@Repository	Indicates a repository (DAO) class
+@EnableJpaRepositories	Enables scanning for Spring Data JPA repositories
+🔷 7. AOP (Aspect-Oriented Programming)
+
+Annotation	Description
+@Aspect	Declares a class as an aspect
+@Before	Advice that runs before a method
+@After	Advice that runs after a method
+@AfterReturning	Advice that runs after returning a value
+@AfterThrowing	Advice that runs after an exception is thrown
+@Around	Advice that wraps around a method
+@EnableAspectJAutoProxy	Enables support for handling components marked with @Aspect
+🔷 8. Transaction Management
+
+Annotation	Description
+@Transactional	Declares that a method/class should be executed in a transaction
+@EnableTransactionManagement	Enables annotation-driven transaction management
+🔷 9. Validation
+
+Annotation	Description
+@Valid	Triggers validation on a method parameter
+@Validated	Enables validation for classes
+@NotNull, @Size, @Min, @Max, etc.	Bean validation annotations (JSR-380)
+🔷 10. Testing
+
+Annotation	Description
+@SpringBootTest	Loads the full application context for integration testing
+@WebMvcTest	Loads only web layer beans for controller tests
+@DataJpaTest	Configures an in-memory database for JPA testing
+@MockBean	Adds mocks to the Spring ApplicationContext
+@Autowired	Injects test dependencies
+If you want a cheat sheet PDF or need examples for any of these, I can help with that too. Just let me know!
+
+
+
+
+
+
+
+
+
+
+
+
+
